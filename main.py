@@ -18,26 +18,26 @@ lives = 3
 
 player_size = 40
 player_pos = [win_width / 2, win_height - player_size]
-player_image = pg.image.load('C:/MyFiles/pyproj/pygame_env/HPPS/to_upload/recycle_bin.png')
+player_image = pg.image.load('./assets/images/recycle_bin.png')
 player_image = pg.transform.scale(player_image,
                                   (player_size,player_size))
 
 obj_size = 60
 obj_data = []
-obj = pg.image.load('C:/MyFiles/pyproj/pygame_env/HPPS/to_upload/fish_bone.png')
+obj = pg.image.load('./assets/images/fish_bone.png')
 obj = pg.transform.scale(obj,(obj_size,obj_size))
 
 heart_size = 60
 heart_data = []
-heart = pg.image.load('C:/MyFiles/pyproj/pygame_env/HPPS/to_upload/Heart.png')
+heart = pg.image.load('./assets/images/Heart.png')
 heart = pg.transform.scale(heart, (heart_size, heart_size))
 
 bag_size = 60
 bag_data = []
-bag = pg.image.load('C:/MyFiles/pyproj/pygame_env/HPPS/to_upload/recyclable_bag.png')
+bag = pg.image.load('./assets/images/recyclable_bag.png')
 bag = pg.transform.scale(bag, (bag_size, bag_size))
 
-bg_image = pg.image.load('C:/MyFiles/pyproj/pygame_env/HPPS/to_upload/background.png')
+bg_image = pg.image.load('./assets/images/background.png')
 bg_image = pg.transform.scale(bg_image, (win_width, win_height))
 
 def check_lives():
@@ -189,5 +189,6 @@ async def main():
         pg.display.flip()
 
         await asyncio.sleep(0)
+
 
 asyncio.run(main())
